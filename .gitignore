@@ -1,24 +1,30 @@
-config.yaml
+# Rust
+/target
+**/*.rs.bk
 
-prisma/client/
+# Node
+node_modules/
+dist/
+*.tsbuildinfo
 
+# Tauri
+/crates/achat-desktop/gen/
+
+# Environment
 .env
-config.json
-apps/server/.env
+.env.*
+!.env.example
 
 # IDE
-.vscode/
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
 
-**/.next/
-**/.vscode/
-**/.idea/
-**/.next/
-**/dist/
-# Turbopack
-.turbo
+# OS
+.DS_Store
+Thumbs.db
 
-**/node_modules/
-
-# Env
-apps/server/.env
+# Turbo
+.turbo/

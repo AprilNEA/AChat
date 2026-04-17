@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="AChat v4 — Coming Soon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0b1220"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#334155" stroke-width="0.5" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="340" fill="url(#bg)"/>
+  <rect width="1200" height="340" fill="url(#grid)"/>
+
+  <!-- Top & bottom accent lines -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accent)"/>
+  <rect x="0" y="337" width="1200" height="3" fill="url(#accent)" opacity="0.7"/>
+
+  <!-- Soft radial glow behind title (uses a shape, not a filter) -->
+  <ellipse cx="300" cy="170" rx="260" ry="80" fill="#a78bfa" opacity="0.08"/>
+
+  <!-- ============================== -->
+  <!-- LEFT COLUMN -->
+  <!-- ============================== -->
+
+  <!-- Status pill -->
+  <g transform="translate(80, 60)">
+    <rect x="0" y="0" width="240" height="32" rx="16" fill="#1e293b" stroke="#60a5fa" stroke-width="1.2"/>
+    <circle cx="18" cy="16" r="4.5" fill="#60a5fa"/>
+    <circle cx="18" cy="16" r="7" fill="#60a5fa" opacity="0.25"/>
+    <text x="138" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="11.5" font-weight="600" fill="#e2e8f0" letter-spacing="1.4" text-anchor="middle">UNDER CONSTRUCTION</text>
+  </g>
+
+  <!-- Title -->
+  <text x="80" y="170"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="78" font-weight="800" fill="url(#accent)" letter-spacing="-2.5">AChat v4</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="208"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="20" font-weight="500" fill="#cbd5e1">Local-first, team-ready AI agent workspace</text>
+
+  <!-- Divider dot row -->
+  <g transform="translate(80, 230)" fill="#475569">
+    <circle cx="0" cy="0" r="2"/>
+    <circle cx="14" cy="0" r="2"/>
+    <circle cx="28" cy="0" r="2"/>
+  </g>
+
+  <!-- Tech chips -->
+  <g transform="translate(80, 258)" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12">
+    <g>
+      <rect x="0" y="0" width="58" height="26" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="29" y="18" fill="#e2e8f0" text-anchor="middle" font-weight="500">Rust</text>
+    </g>
+    <g transform="translate(68, 0)">
+      <rect x="0" y="0" width="62" height="26" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="31" y="18" fill="#e2e8f0" text-anchor="middle" font-weight="500">Axum</text>
+    </g>
+    <g transform="translate(140, 0)">
+      <rect x="0" y="0" width="70" height="26" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="35" y="18" fill="#e2e8f0" text-anchor="middle" font-weight="500">Tauri 2</text>
+    </g>
+    <g transform="translate(220, 0)">
+      <rect x="0" y="0" width="82" height="26" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="41" y="18" fill="#e2e8f0" text-anchor="middle" font-weight="500">React 19</text>
+    </g>
+    <g transform="translate(312, 0)">
+      <rect x="0" y="0" width="70" height="26" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="35" y="18" fill="#e2e8f0" text-anchor="middle" font-weight="500">SQLite</text>
+    </g>
+    <g transform="translate(392, 0)">
+      <rect x="0" y="0" width="94" height="26" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="47" y="18" fill="#e2e8f0" text-anchor="middle" font-weight="500">PostgreSQL</text>
+    </g>
+  </g>
+
+  <!-- ============================== -->
+  <!-- RIGHT COLUMN: Terminal mockup -->
+  <!-- ============================== -->
+
+  <g transform="translate(780, 70)" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12">
+    <!-- Shadow -->
+    <rect x="4" y="6" width="340" height="200" rx="10" fill="#000" opacity="0.35"/>
+    <!-- Window -->
+    <rect x="0" y="0" width="340" height="200" rx="10" fill="#020617" stroke="#334155"/>
+    <!-- Title bar -->
+    <rect x="0" y="0" width="340" height="30" rx="10" fill="#0f172a"/>
+    <rect x="0" y="20" width="340" height="10" fill="#0f172a"/>
+    <circle cx="16" cy="15" r="5" fill="#ef4444"/>
+    <circle cx="34" cy="15" r="5" fill="#eab308"/>
+    <circle cx="52" cy="15" r="5" fill="#22c55e"/>
+    <text x="170" y="19" fill="#64748b" text-anchor="middle" font-size="11">achat — zsh</text>
+
+    <!-- Terminal content -->
+    <text x="18" y="58" fill="#64748b">$ cargo run -p achat-server</text>
+    <text x="18" y="80" fill="#94a3b8">   Compiling achat-core</text>
+    <text x="18" y="98" fill="#94a3b8">   Compiling achat-agent</text>
+    <text x="18" y="116" fill="#94a3b8">   Compiling achat-server</text>
+    <text x="18" y="138" fill="#60a5fa">    Finished in 4.2s</text>
+    <text x="18" y="160" fill="#a78bfa">    Listening on 0.0.0.0:3000</text>
+    <text x="18" y="182" fill="#64748b">$ <tspan fill="#e2e8f0">_</tspan></text>
+  </g>
+</svg>

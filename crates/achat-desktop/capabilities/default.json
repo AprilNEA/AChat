@@ -1,0 +1,8 @@
+{
+  "identifier": "default",
+  "description": "Default capabilities for AChat desktop",
+  "windows": ["main"],
+  "permissions": [
+    "core:default"
+  ]
+}

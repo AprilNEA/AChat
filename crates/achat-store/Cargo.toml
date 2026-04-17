@@ -1,0 +1,28 @@
+[package]
+name = "achat-store"
+description = "Storage abstraction layer (SQLite local / PostgreSQL cloud) for AChat"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[features]
+default = []
+sqlite = ["rusqlite"]
+postgres = ["sqlx/postgres"]
+
+[dependencies]
+achat-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+
+# Optional: SQLite for local desktop storage
+rusqlite = { workspace = true, optional = true }
+
+# Optional: PostgreSQL for cloud server
+sqlx = { workspace = true, optional = true }

@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: achat
+      POSTGRES_USER: achat
+      POSTGRES_PASSWORD: achat
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  server:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.server
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgres://achat:achat@postgres:5432/achat
+      RUST_LOG: info
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:

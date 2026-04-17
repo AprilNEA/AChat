@@ -1,0 +1,19 @@
+# Multi-stage build for achat-server
+FROM rust:1.85 AS builder
+
+WORKDIR /app
+COPY Cargo.toml Cargo.lock rust-toolchain.toml ./
+COPY crates/ crates/
+
+# Build only the server binary
+RUN cargo build --release --bin achat-server
+
+# Runtime stage
+FROM debian:bookworm-slim
+
+RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /app/target/release/achat-server /usr/local/bin/achat-server
+
+EXPOSE 3000
+CMD ["achat-server"]

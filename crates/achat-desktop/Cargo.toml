@@ -1,0 +1,30 @@
+[package]
+name = "achat-desktop"
+description = "Tauri v2 desktop application for AChat"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "achat_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[[bin]]
+name = "achat-desktop"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { workspace = true, features = [] }
+
+[dependencies]
+achat-core = { workspace = true }
+achat-provider = { workspace = true }
+achat-agent = { workspace = true }
+achat-store = { workspace = true, features = ["sqlite"] }
+achat-sync = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+tauri = { workspace = true, features = [] }

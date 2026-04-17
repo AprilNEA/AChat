@@ -1,9 +1,0 @@
-{
-  "extends": "@achat/tsconfig/node-library.json",
-  "compilerOptions": {
-    "composite": true,
-    "outDir": "./dist",
-    "tsBuildInfoFile": "./dist/.tsbuildinfo"
-  },
-  "include": ["src/**/*.ts"]
-}

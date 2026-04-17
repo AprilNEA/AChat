@@ -1,89 +1,90 @@
 <h4 align="right"><strong>English</strong> | <a href="./README_CN.md">简体中文</a></h4>
+
 <p align="center">
-    <img src="./docs/public/icon.png" width=138/>
+    <img src="https://s2.loli.net/2023/10/23/MLfhA2owPCacmyU.png" width="138" alt="AChat logo"/>
 </p>
+
 <h1 align="center">AChat</h1>
-<p align="center"><strong>An open-source/self-hosted/local-first AI platform, designed for enterprises and teams, perfectly combining powerful local processing capabilities with seamless remote synchronization.</em>.</strong></p>
 
 <p align="center">
-  <a href="https://github.com/AprilNEA/AChat/stargazers"><img src="https://img.shields.io/github/stars/AprilNEA/AChat" alt="Stars Badge"/></a>
-  <a href="https://github.com/AprilNEA/AChat/network/members"><img src="https://img.shields.io/github/forks/AprilNEA/AChat" alt="Forks Badge"/></a>
-  <a href="https://github.com/AprilNEA/AChat/pulls"><img src="https://img.shields.io/github/issues-pr/AprilNEA/AChat" alt="Pull Requests Badge"/></a>
-  <a href="https://github.com/AprilNEA/AChat/issues"><img src="https://img.shields.io/github/issues-closed/AprilNEA/AChat" alt="Issues Badge"/></a>
-  <a href="https://github.com/AprilNEA/AChat/blob/main/LICENSE"><img src="https://img.shields.io/github/license/AprilNEA/AChat" alt="License Badge"/></a>
-  <br/> 
-  <a href="https://twitter.com/AprilNEA" target="_blank">
-    <img alt="twitter" src="https://img.shields.io/twitter/follow/AprilNEA"></a>
-  <a href="https://t.me/achatlab" target="_blank">
-    <img alt="telegram" src="https://img.shields.io/badge/channel-telegram-blueviolet?style=square&logo=Telegram"></a>
-  <img src="https://hits.aprilnea.com/hits?url=https://github.com/AprilNEA/AChat" />
+    <strong>A local-first, team-ready AI agent workspace.</strong>
 </p>
 
 <div align="center">
-<a href="https://trendshift.io/repositories/4856" target="_blank">
-<img src="https://trendshift.io/api/badge/repositories/4856" alt="AprilNEA%2FChatGPT-Admin-Web | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+    <a href="https://twitter.com/AprilNEA" target="_blank">
+        <img alt="twitter" src="https://img.shields.io/badge/follow-AprilNEA-green?style=flat-square&logo=Twitter"/>
+    </a>
+    <a href="https://github.com/AprilNEA/ChatGPT-Admin-Web/commits" target="_blank">
+        <img alt="GitHub commit" src="https://img.shields.io/github/commit-activity/m/AprilNEA/ChatGPT-Admin-Web?style=flat-square"/>
+    </a>
+    <a href="./LICENSE.md" target="_blank">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square"/>
+    </a>
+    <img alt="status" src="https://img.shields.io/badge/v4-under%20construction-orange?style=flat-square"/>
+</div>
+
+<br/>
+
+<p align="center">
+    <img src="./docs/assets/coming-soon-banner.svg" alt="AChat v4 — Coming Soon" width="100%"/>
+</p>
+
+---
+
+## About
+
+**AChat v4** is a complete rewrite, repositioning the project as a **local-first, team-ready AI agent workspace**.
+
+- **Local-first.** Your data lives on your machine in SQLite. Work offline, own your history.
+- **Team-ready.** Optional sync to a self-hosted cloud server lets your team share conversations and collaborate.
+- **Agents everywhere.** Run agents locally in the desktop app, in the browser against the cloud, or offload heavy jobs from desktop to cloud compute — all driven by the same Rust agent runtime.
+- **Bring your own models.** First-class support for Ollama (local), OpenAI, Anthropic, and any OpenAI-compatible endpoint.
+
+## Tech Stack
+
+| Layer                | Tech                                         |
+|----------------------|----------------------------------------------|
+| Cloud server         | Rust · Axum · PostgreSQL · sqlx              |
+| Desktop app          | Rust · Tauri 2 · SQLite (rusqlite, bundled)  |
+| Agent runtime        | Shared Rust crate — runs in both desktop and server |
+| Sync engine          | Hybrid Logical Clock (HLC) + last-write-wins |
+| Web / Desktop UI     | React 19 · Vite 6 · TypeScript · Tailwind 4 · Radix UI |
+| Routing              | react-router v7                              |
+| State                | Zustand                                      |
+| Monorepo             | Cargo workspace + pnpm + Turborepo           |
+
+## Status
+
+v4 is **under active construction**. The monorepo scaffold, crate boundaries, and platform bridge are in place; core features (agent runtime, providers, sync) are being implemented next.
+
+Progress can be tracked in the [commit log](https://github.com/AprilNEA/ChatGPT-Admin-Web/commits/v4).
+
+## Project History
+
+AChat began as **ChatGPT Admin Web (CAW)** — a self-hosted ChatGPT front-end with user management, payments, and admin tooling. Over time it evolved through several major revisions before being reimagined as a local-first agent workspace.
+
+| Version                                                       | Status              | Stack                      | Note                                    |
+|---------------------------------------------------------------|---------------------|----------------------------|-----------------------------------------|
+| [v4](https://github.com/AprilNEA/ChatGPT-Admin-Web/tree/v4)   | In development      | Rust · Tauri · Axum · React | Local-first agent workspace (current)   |
+| [v3.2](https://github.com/AprilNEA/ChatGPT-Admin-Web/tree/v3.2) | Long-term support   | Next.js · NestJS · Prisma   | Final release of the admin-panel era    |
+| [v3](https://github.com/AprilNEA/ChatGPT-Admin-Web/tree/v3)   | Superseded by v3.2  | Next.js · NestJS · Prisma   | Full rewrite with modern tech stack     |
+| [v2](https://github.com/AprilNEA/ChatGPT-Admin-Web/tree/v2)   | Deprecated          | Next.js · PostgreSQL        | Flawed design                           |
+| [v1](https://github.com/AprilNEA/ChatGPT-Admin-Web/tree/v1)   | No longer updated   | Next.js · Redis             | Initial Redis-backed prototype          |
+
+Archived READMEs from earlier versions live under [`docs/history/`](./docs/history/).
+
+## Contributors
+
+<a href="https://github.com/AprilNEA/ChatGPT-Admin-Web/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=AprilNEA/ChatGPT-Admin-Web" alt="Contributors"/>
 </a>
-</div>
-
-<div align="center">
-
-[GitHub Sponsor](https://github.com/sponsors/AprilNEA) / [Afdian](https://afdian.net/a/aprilnea)
-
-</div>
-
-## Main Features 
-- 💬 **Centralized AI Conversation Management**
-  Manage all team AI dialogues in one unified platform for easy tracking and collaboration.
-
-- 🗂️ **Organized Conversation History**
-  Effortlessly search, categorize, and revisit past AI interactions.
-
--	💸 **Built-in Commercial Support**
-  Integrated tools for AI usage billing, payment, and cost management.
-
--	👥 **Team Collaboration Tools**
-  Assign roles, set permissions, and work together seamlessly.
-
-- 🔒 **Data Privacy & Security**
-  Open-source transparency with robust data protection features.
-
-- 🚀 **Customizable & Extensible**
-  Easily integrate with your workflows and extend functionalities via plugins.
-
--	📑 **Data Compliance**
-  Ensure compliance with data regulations and industry standards for secure and lawful data management.
-
--	🛡️ **Content Moderation**
-  Built-in content review features help monitor, filter, and manage inappropriate or sensitive information.
-
-## Start
-
-For configuration and installation, see [documentation](https://manual.sku.moe/project/chatgpt-admin-web)
-
-## Versions
-
-| Version                                             | Status                               | Note                            |
-| --------------------------------------------------- | ------------------------------------ | ------------------------------- |
-| [V4](https://github.com/AprilNEA/AChat/tree/canary) | :white_check_mark: Under Development |                                 |
-| [V3](https://github.com/AprilNEA/AChat/tree/v3)     | :o: No longer updated                | Refactor with modern tech stack |
-| [V2](https://github.com/AprilNEA/AChat/tree/v2)     | :x: Deprecated                       | Flawed design                   |
-| [V1](https://github.com/AprilNEA/AChat/tree/main)   | :o: No longer updated                | Redis database, less scalable   |
-
-[Update Log](https://manual.sku.moe/project/chatgpt-admin-web/update-log)
-
-## Project Status
-
-![Project Status](https://repobeats.axiom.co/api/embed/731fc03bff4e8b722fa66c9f2b25242f54cf7a50.svg "Repobeats analytics image")
-
-News: [Telegram Channel](https://t.me/AChat)
-
-## Star History
-
-[![AChat Star History Chart](https://api.star-history.com/svg?repos=AprilNEA/AChat&type=Timeline)](https://www.star-history.com/#AprilNEA/AChat&Timeline)
 
 ## Donate
 
-Thank you for the inspiration to keep the program going.
+Thank you for the inspiration to keep this project going.
 
-[GitHub Sponsor](https://github.com/sponsors/AprilNEA)  |  [Afdian](https://afdian.net/a/aprilnea)
+[GitHub Sponsor](https://github.com/sponsors/AprilNEA) · [Afdian](https://afdian.net/a/aprilnea)
 
+## License
+
+[MIT](./LICENSE.md) © AprilNEA

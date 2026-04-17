@@ -1,18 +1,12 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.1.1/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true
   },
-  "files": {
-    "ignoreUnknown": false,
-    "ignore": [
-      "dist",
-      ".next",
-      ".turbo",
-      "node_modules"
-    ]
+  "organizeImports": {
+    "enabled": true
   },
   "formatter": {
     "enabled": true,
@@ -22,27 +16,13 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
-      "style": {
-        "noInferrableTypes": "off"
-      },
-      "a11y": {
-        "useValidAriaRole": "off",
-        "noSvgWithoutTitle": "off"
-      }
-    }
-  },
-  "assist": {
-    "enabled": true,
-    "actions": {
-      "source": {
-        "organizeImports": "on"
-      }
+      "recommended": true
     }
   },
   "javascript": {
     "formatter": {
-      "quoteStyle": "double"
+      "quoteStyle": "single",
+      "semicolons": "always"
     }
   }
 }

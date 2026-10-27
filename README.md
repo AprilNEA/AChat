@@ -10,7 +10,7 @@
   <a href="https://github.com/AprilNEA/AChat/network/members"><img src="https://img.shields.io/github/forks/AprilNEA/AChat" alt="Forks Badge"/></a>
   <a href="https://github.com/AprilNEA/AChat/pulls"><img src="https://img.shields.io/github/issues-pr/AprilNEA/AChat" alt="Pull Requests Badge"/></a>
   <a href="https://github.com/AprilNEA/AChat/issues"><img src="https://img.shields.io/github/issues-closed/AprilNEA/AChat" alt="Issues Badge"/></a>
-  <a href="https://github.com/AprilNEA/AChat/blob/main/LICENSE"><img src="https://img.shields.io/github/license/AprilNEA/AChat" alt="License Badge"/></a>
+  <a href="./LICENSE.md"><img src="https://img.shields.io/github/license/AprilNEA/AChat" alt="License Badge"/></a>
   <br/> 
   <a href="https://twitter.com/AprilNEA" target="_blank">
     <img alt="twitter" src="https://img.shields.io/twitter/follow/AprilNEA"></a>
